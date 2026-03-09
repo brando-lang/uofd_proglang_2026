@@ -18,11 +18,13 @@ fn evaluate(primitives: Vec<Primitive>) -> i32 {
 
 fn main() {
 
+    // New expression: Addition of 15 + 25 + 10 + 50 = 100
     let mut primitives = Vec::<Primitive>::new();
-    primitives.push(Primitive::Multiply);
-    primitives.push(Primitive::Number(3));
-    primitives.push(Primitive::Number(4));
-    primitives.push(Primitive::Number(5));
+    primitives.push(Primitive::Add);
+    primitives.push(Primitive::Number(15));
+    primitives.push(Primitive::Number(25));
+    primitives.push(Primitive::Number(10));
+    primitives.push(Primitive::Number(50));
     let result = evaluate(primitives);
     println!("The result is {result}");
 
